@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,16 +6,27 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="window">
-            
+        <div class="size window">
+            <div class="buttons">
+                <button class="sound listAll" id="listAll">allBooks</button>
+                <button class="sound addNew" id="addNew">addNew</button>
+            </div>
+            <div class="screen1 allBooks inactive">
+                
+            </div>
+            <div class="screen2 edits inactive">
+    
+            </div>
+            <div class="screen3 inactive">
+                
+            </div>
         </div>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="script.js" async defer></script>
+        <div><button class="sound goBack">goBack</button></div>
+        <script src="./script.js" async defer></script>
     </body>
 </html>
