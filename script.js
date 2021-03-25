@@ -1,7 +1,6 @@
 
 //API
-const res = await fetch('http://myapi-profstream.herokuapp.com/api/ae81f3/books')
-const data = await res.json()
+
 
 
 
@@ -44,4 +43,9 @@ const addNew = document.querySelector('#addNew')
 addNew.addEventListener('click', () => {
     toggleScreen2()
     console.log('addNew')
+})
+
+const goBack = document.querySelector('.goBack')
+goBack.addEventListener('click', () => {
+    location.reload()
 })

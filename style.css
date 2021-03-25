@@ -2,19 +2,65 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    background-image: url(assets/bookShelves.jpg);
 }
+
+button {
+    background-color: #51300D;
+    display:inline-block;
+    position:relative;
+    padding:10px 20px;
+    border:2px solid #fda;
+    color:#fda;
+    font-family: 'Cedarville Cursive', cursive;
+    font-style:italic;
+    font-size:30px;
+    text-decoration:none;
+    margin:20px auto;
+    transition: color 0.4s
+}
+
+button:after {
+    content:" ";
+    border:2px solid rgba(0,0,0,0);
+    display:inline-block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    transition:all 0.4s;
+    transform: scale(1.05);
+} 
+
+button:hover {
+    color:#eee
+}
+
+button:hover:after {  
+    border:2px solid #fda;
+    width: calc(100% - 10px);
+    height: calc(100% + 10px); 
+}
+
 .buttons {
-    margin-top: 200px;
     margin: auto;
     display: flex;
     align-items: center;
     border: 2px solid red;
     justify-content: space-evenly;
 }
+.goBack {
+    margin: auto;
+    display: flex;
+}
 
 .size {
-    margin-top: 100px;
+    background-image: url(assets/insideShelf.jpg);
+    margin-top: 80px;
     width: 1080px;
     height: 720px;
     border: 5px solid #ffa500;
