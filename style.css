@@ -33,11 +33,13 @@ button:after {
     bottom:0;
     margin:auto;
     transition:all 0.4s;
-    transform: scale(1.05);
 } 
 
+
 button:hover {
-    color:#eee
+    cursor: pointer;
+    color: #eee;
+    transform: scale(1.05);
 }
 
 button:hover:after {  
@@ -50,7 +52,6 @@ button:hover:after {
     margin: auto;
     display: flex;
     align-items: center;
-    border: 2px solid red;
     justify-content: space-evenly;
 }
 .goBack {
@@ -63,7 +64,7 @@ button:hover:after {
     margin-top: 80px;
     width: 1080px;
     height: 720px;
-    border: 5px solid #ffa500;
+    border: 5px solid #9F5935;
     border-radius: 25px;
     align-items: center;
 }
@@ -75,7 +76,7 @@ button:hover:after {
     flex-direction: column;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    border: solid black 2px;
+    border: solid orange 2px;
     height: 480px;
     width: 780px;
     border-radius: 25px;
@@ -88,7 +89,7 @@ button:hover:after {
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    border: solid orange 2px;
+    border: solid orangered 2px;
     height: 480px;
     width: 780px;
     border-radius: 25px;
