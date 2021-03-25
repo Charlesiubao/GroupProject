@@ -36,29 +36,24 @@ const toggleScreen3 = () => {
 const listAll = document.querySelector('#listAll')
 listAll.addEventListener('click', () => {
     toggleScreen1()
-    buttonSound.play()
+    pageTurn.play()
     // console.log('listAll')
 })
 
 const addNew = document.querySelector('#addNew')
 addNew.addEventListener('click', () => {
     toggleScreen2()
-    buttonSound.play()
+    pageTurn.play()
     // console.log('addNew')
 })
 
 const goBack = document.querySelector('.goBack')
 goBack.addEventListener('click', () => {
+    pageTurn.play()
     location.reload()
 })
 
 //Audio
-let buttonSound = new Audio('assets/pageTurn.mp3')
-buttonSound.volume = 0.5;
+let pageTurn = new Audio('assets/pageTurn.mp3')
+pageTurn.volume = 0.8;
 
-let sound = document.querySelectorAll('.sound')
-sound.forEach(button => {
-    button.addEventListener('click', () => {
-        buttonSound.play()
-    })
-})

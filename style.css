@@ -6,11 +6,12 @@ body {
 }
 
 button {
-    background-color: #51300D;
+    background-color: #51300d;
     display:inline-block;
     position:relative;
     padding:10px 20px;
     border:2px solid #fda;
+    border-radius: 15px;
     color:#fda;
     font-family: 'Cedarville Cursive', cursive;
     font-style:italic;
@@ -43,6 +44,7 @@ button:hover {
 }
 
 button:hover:after {  
+    border-radius: 15px;
     border:2px solid #fda;
     width: calc(100% - 10px);
     height: calc(100% + 10px); 
@@ -55,7 +57,7 @@ button:hover:after {
     justify-content: space-evenly;
 }
 .goBack {
-    margin: auto;
+    margin-top: 20px;
     display: flex;
 }
 
@@ -70,26 +72,28 @@ button:hover:after {
 }
 
 .screen1 {
+    background-color: rgba(255, 221, 170, 0.611);
     /* justify-content: space-evenly; */
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    border: solid orange 2px;
+    border: solid #51300d 3px;
     height: 480px;
     width: 780px;
     border-radius: 25px;
 }
 
 .screen2 {
+    background-color: rgba(255, 221, 170, 0.611);
     /* justify-content: space-evenly; */
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    border: solid orangered 2px;
+    border: solid orangered 3px;
     height: 480px;
     width: 780px;
     border-radius: 25px;
