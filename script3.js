@@ -3,6 +3,11 @@
 
 let booksID = null
 
+// const titlemain=document.classList.add('#edit-title')
+// const authormain=document.querySelector('#edit-author')
+// const releaseyearmain=document.querySelector('#edit-releaseyear')
+
+
 const bookIndex = async () => {
 
 // document.querySelector('.allBooks').classList.remove(‘hidden’)
@@ -17,6 +22,7 @@ document.querySelector(`#listall`).textContent = ‘’
 
 for (book of data) {
 
+    //creates a div and class of single-book that shows a the books
 	const bookDiv = document.createElement(`div`)
     bookDiv.classList.add(`single-book`)
     bookDiv.innerText = `${book.title}, from ${book.author}`
@@ -27,17 +33,18 @@ for (book of data) {
 }
 
 
+
+//
 const goToShow = async (id) => {
     const res = await fetch(`http://myapi-profstream.herokuapp.com/api/6e5dd1/books/${id}`)
     const data = await res.json()
     document.createElement(`div`)
-    document.classList.add(`show-name`)
+    document.classList.add(`show-title`)
     document.classList.add(`show-book-author`)
     document.classList.add(`show-release`)
     document.classList.add(`show-cover`)
-    document.querySelector(`.show-name`).innerText = data.name
-    document.querySelector(`.show-book-author`).innerText = `${data.author}`
     document.querySelector(`.show-title`).innerText = data.title
+    document.querySelector(`.show-book-author`).innerText = `${data.author}`
     document.querySelector(`.show-release`).innerText = data.release_year
     document.querySelector(`.show-cover`).src = data.image
 
@@ -73,13 +80,14 @@ document.addEventListener('click', async (event) => {
 document.querySelector('#new-book-form').addEventListener('submit', async (event) => {
     event.preventDefault()
 
-    const name = document.querySelector('#newbook').value
+    //may have to review newbook
+    const title = document.querySelector('#newbook').value
     const author = "Eckhart Tolle"
-    const releaseyear = '1970'
+    const release_year = '1970'
     const picture = 'picture'
 
 
-    const body = JSON.stringify({ name, author, releaseyear, picture})
+    const body = JSON.stringify({ title, author, release_year, picture})
 
     const res = await fetch('http://myapi-profstream.herokuapp.com/api/6e5dd1/books', {
       method: 'POST',
@@ -105,6 +113,7 @@ document.querySelector('#new-book-form').addEventListener('submit', async (event
   const goToEdit = async (id) => {
     const res = await fetch(`http://myapi-profstream.herokuapp.com/api/6e5dd1/books/${id}`)
     const book = await res.json()
+
 
     document.querySelector('#edit-title').value = book.title
     document.querySelector('#edit-author').value = book.author
