@@ -4,6 +4,14 @@ body {
     align-items: center;
 
 }
+.buttons {
+    margin-top: 200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border: 2px solid red;
+    justify-content: space-evenly;
+}
 
 .size {
     margin-top: 100px;
@@ -16,11 +24,14 @@ body {
 
 .screen1 {
     /* justify-content: space-evenly; */
-    margin-top: 20px;
+    margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     flex-wrap: wrap;
     border: solid black 2px;
+    height: 480px;
+    width: 780px;
     border-radius: 25px;
 }
 
@@ -28,6 +39,7 @@ body {
     /* justify-content: space-evenly; */
     margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     border: solid orange 2px;
@@ -36,6 +48,18 @@ body {
     border-radius: 25px;
 }
 
-/* .inactive {
+.screen3 {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: solid purple 2px;
+    height: 480px;
+    width: 780px;
+    border-radius: 25px;
+}
+
+.inactive {
     display: none;
-} */
+}
