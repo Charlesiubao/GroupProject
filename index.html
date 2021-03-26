@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>GroupProject</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./style.css">
@@ -21,7 +21,7 @@
                 <img class="cat" src="assets/shelf.jpg">
             </div>
             <div id="allBooks" class="screen1 allBooks inactive">
-                
+            
             </div>
             <div class="screen2 edits inactive">
                 <form id="editBookForm">
@@ -34,11 +34,11 @@
                     <label for="editReleaseDate">Published:</label>
                     <input type="text" id="editReleaseDate">
 
-                    <button id="addBook">Submit</button>
+                    <button id="editBook">Submit</button>
                 </form>
 
             </div>
-            <div class="screen3 newAddition inactive">
+            <div id="newAddition" class="screen3 newAddition inactive">
                 <form id="newBookForm">
                     <label for="nameOfBook">Title:</label>
                     <input type="text" id="nameOfBook">
@@ -52,13 +52,15 @@
                     <button id="addBook">Submit</button>
                 </form>
             </div>
-            <div class="screen4 view inactive">
-                <span id="viewTitle"></span><br/>
+            <div id="view" class="screen4 view inactive">
+                <div><span id="viewTitle"></span><br/>
                 By <span id="viewAuthor"></span><br/>
-                Released on <span id="viewReleaseDate"></span><br/>
-                <img id="viewImage" src="">
-                <button id="deleteBook">Delete</button>
-                <button id="editBook">Edit</button>
+                Released on <span id="viewReleaseDate"></span></div>
+                <div><img id="viewImage" src=""></div>
+                <div>
+                    <button id="deleteBook">Delete</button>
+                    <button id="editBook">Edit</button>
+                </div>
             </div>
         </div>
         <div><button class="goBack">goBack</button></div>

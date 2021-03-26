@@ -68,6 +68,13 @@ button:hover:after {
     margin-top: 20px;
 }
 
+#viewImage {
+    height : 240px;
+    width: 160px;
+    align-items: center;
+    
+}
+
 .size {
     background-image: url(assets/insideShelf.jpg);
     background-repeat: no-repeat;
@@ -118,6 +125,7 @@ button:hover:after {
     height: 480px;
     width: 780px;
     border-radius: 25px;
+    align-items: center;
 }
 
 .screen2 {
@@ -133,6 +141,7 @@ button:hover:after {
     height: 480px;
     width: 780px;
     border-radius: 25px;
+    align-items: center;
 }
 
 .screen3 {
@@ -147,6 +156,22 @@ button:hover:after {
     height: 480px;
     width: 780px;
     border-radius: 25px;
+    align-items: center;
+}
+
+.screen4 {
+    background-color: rgba(255, 221, 170, 0.611);
+    /* justify-content: space-evenly; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: solid #DE9B72 3px;
+    height: 480px;
+    width: 780px;
+    border-radius: 25px;
+    align-items: center;
 }
 
 .inactive {
