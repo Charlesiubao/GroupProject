@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>GroupProject</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./style.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="size window">
-            <div class="buttons">
-                <button class="listAll" id="listAll">allBooks</button>
-                <button class="addNew" id="addNew">addNew</button>
-            </div>
-            <div class="frontPage">
-                <img class="title" src="assets/myLittleBookShelf.png">
-                <img class="cat" src="assets/shelf.jpg">
-            </div>
-            <div id="allBooks" class="screen1 allBooks inactive">
-            
-            </div>
-            <div class="screen2 edits inactive">
-                <form id="editBookForm">
-                    <label for="editBook">Title:</label>
-                    <input type="text" id="editNameOfBook">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>GroupProject</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="size window">
+      <div class="buttons">
+        <button class="listAll" id="listAll">allBooks</button>
+        <button class="addNew" id="addNew">addNew</button>
+      </div>
+      <div class="frontPage">
+        <img class="title" src="assets/myLittleBookShelf.png" />
+        <img class="cat" src="assets/shelf.jpg" />
+      </div>
+      <div id="allBooks" class="screen1 allBooks inactive">
 
-                    <label for="editAuthor">Author:</label>
-                    <input type="text" id="editNewAuthor">
-
-                    <label for="editReleaseDate">Published:</label>
-                    <input type="text" id="editReleaseDate">
-
-                    <button id="editBook">Submit</button>
-                </form>
-
-            </div>
-            <div id="newAddition" class="screen3 newAddition inactive">
-                <form id="newBookForm">
-                    <label for="nameOfBook">Title:</label>
-                    <input type="text" id="nameOfBook">
-
-                    <label for="newAuthor">Author:</label>
-                    <input type="text" id="newAuthor">
-
-                    <label for="releaseDate">Published:</label>
-                    <input type="text" id="releaseDate">
-
-                    <button id="addBook">Submit</button>
-                </form>
-            </div>
-            <div id="view" class="screen4 view inactive">
-                <div><span id="viewTitle"></span><br/>
-                By <span id="viewAuthor"></span><br/>
-                Released on <span id="viewReleaseDate"></span></div>
-                <div><img id="viewImage" src=""></div>
-                <div>
-                    <button id="deleteBook">Delete</button>
-                    <button id="editBook">Edit</button>
-                </div>
-            </div>
+        
+      </div>
+      <div class="screen2 edits inactive">
+        <form id="editBookForm">
+          <label for="editBook">Title:</label>
+          <input type="text" id="editNameOfBook" />
+          <label for="editAuthor">Author:</label>
+          <input type="text" id="editNewAuthor" />
+          <label for="editReleaseDate">Published:</label>
+          <input type="text" id="editReleaseDate" />
+          <button id="editBooks">Submit</button>
+        </form>
+      </div>
+      <div id="newAddition" class="screen3 newAddition inactive">
+        <form id="newBookForm">
+          <label for="nameOfBook">Title:</label>
+          <input type="text" id="nameOfBook" />
+          <label for="newAuthor">Author:</label>
+          <input type="text" id="newAuthor" />
+          <label for="releaseDate">Published:</label>
+          <input type="text" id="releaseDate" />
+          <button id="addBook">Submit</button>
+        </form>
+      </div>
+      <div id="view" class="screen4 view inactive">
+        <div>
+          <span id="viewTitle"></span><br />
+          By <span id="viewAuthor"></span><br />
+          Released on <span id="viewReleaseDate"></span>
         </div>
-        <div><button class="goBack">goBack</button></div>
-        <script src="./script.js" async defer></script>
-    </body>
+        <div>
+          <img id="viewImage" src="" />
+        </div>
+        <div>
+          <button id="deleteBook">Delete</button>
+          <button id="editBook">Edit</button>
+        </div>
+      </div>
+    </div>
+    <div class="bottomButtons">
+      <button class="goBack">goBack</button>
+      <button onClick="toggleSound()" id="mute" class="mute sound">sound</button>
+    </div>
+    <script src="./script.js" async defer></script>
+  </body>
 </html>
