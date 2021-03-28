@@ -5,8 +5,6 @@ body {
     background-image: url(assets/bookShelves.jpg);
 }
 
-
-
 button {
     background-color: #302619;
     display:inline-block;
@@ -38,7 +36,6 @@ button:after {
     transition:all 0.4s;
 } 
 
-
 button:hover {
     cursor: pointer;
     color: #eee;
@@ -55,23 +52,17 @@ button:hover:after {
 .buttons {
     margin: auto;
     display: flex;
-    /* align-items: center; */
-    /* justify-content: space-evenly; */
 }
 
 .bottomButtons {
     margin: auto;
     display: flex;
-    /* align-items: center;
-    justify-content: space-between; */
 }
 
 .goBack {
-    /* margin: auto; */
     display: flex;
 }
 .sound {
-    /* margin: auto; */
     display: flex;
 }
 
@@ -99,7 +90,6 @@ button:hover:after {
     transform: scale(1.05);
     border:2px solid #302619;
 }
-
 
 .size {
     background-image: url(assets/insideShelf.jpg);
@@ -134,14 +124,11 @@ button:hover:after {
     margin:auto;
     width: 1080px;
     height: 720px;
-    /* border: 5px solid #fda; */
-    /* border-radius: 25px; */
     align-items: center;
 }
 
 .screen1 {
     background-color: rgba(255, 221, 170, 0.611);
-    /* justify-content: space-evenly; */
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -156,7 +143,6 @@ button:hover:after {
 
 .screen2 {
     background-color: rgba(255, 221, 170, 0.611);
-    /* justify-content: space-evenly; */
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -171,7 +157,6 @@ button:hover:after {
 
 .screen3 {
     background-color: rgba(255, 221, 170, 0.611);
-    /* justify-content: space-evenly; */
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -186,7 +171,6 @@ button:hover:after {
 
 .screen4 {
     background-color: rgba(255, 221, 170, 0.611);
-    /* justify-content: space-evenly; */
     margin: auto;
     display: flex;
     flex-direction: column;

@@ -25,18 +25,18 @@ const showAllBooks = async () => {
   frontPage.classList.add("inactive");
   view.classList.add("inactive");
 
-  const res = await fetch("http://myapi-profstream.herokuapp.com/api/6e5dd1/books");
+  const res = await fetch("https://myapi-profstream.herokuapp.com/api/6e5dd1/books");
   const data = await res.json();
 
   document.querySelector('#allBooks').textContent = "";
 
   for (book of data) {
-    const bookDiv = document.createElement("div");
-    bookDiv.classList.add("single-book");
-    bookDiv.innerText = `${book.title}, from ${book.author}`;
-    bookDiv.src = `${book.image}`;
-    bookDiv.id = "book-" + book.id;
-    document.querySelector("#allBooks").append(bookDiv);
+    const bookList = document.createElement("li");
+    bookList.classList.add("single-book");
+    bookList.innerText = `${book.title}, from ${book.author}`;
+    bookList.src = `${book.image}`;
+    bookList.id = "book-" + book.id;
+    document.querySelector("#allBooks").append(bookList);
   }
 };
 
@@ -46,7 +46,7 @@ document.querySelector("#listAll").addEventListener("click", () => {
 })
 
 const toggleView = async (id) => {
-  const res = await fetch(`http://myapi-profstream.herokuapp.com/api/6e5dd1/books/${id}`);
+  const res = await fetch(`https://myapi-profstream.herokuapp.com/api/6e5dd1/books/${id}`);
   const data = await res.json();
 
   document.querySelector("#viewTitle").innerText = data.title;
@@ -94,7 +94,7 @@ document.querySelector("#newBookForm").addEventListener("submit", async (event) 
       release_date,
     });
 
-    const res = await fetch("http://myapi-profstream.herokuapp.com/api/6e5dd1/books/",
+    const res = await fetch("https://myapi-profstream.herokuapp.com/api/6e5dd1/books/",
       {
         method: "POST",
         headers: {
@@ -111,7 +111,7 @@ document.querySelector("#newBookForm").addEventListener("submit", async (event) 
 //Deleting book
 document.querySelector("#deleteBook").addEventListener("click", async () => {
   await fetch(
-    `http://myapi-profstream.herokuapp.com/api/6e5dd1/books/${bookId}`,
+    `https://myapi-profstream.herokuapp.com/api/6e5dd1/books/${bookId}`,
     {
       method: "DELETE",
     }
@@ -128,7 +128,7 @@ document.querySelector("#editBook").addEventListener("click", (event) => {
 
 const edit = async (id) => {
   const res = await fetch(
-    `http://myapi-profstream.herokuapp.com/api/6e5dd1/books/${id}`
+    `https://myapi-profstream.herokuapp.com/api/6e5dd1/books/${id}`
   );
   const book = await res.json();
 
@@ -159,7 +159,7 @@ document.querySelector("#editBookForm").addEventListener("submit", async (event)
     });
 
     const res = await fetch(
-      `http://myapi-profstream.herokuapp.com/api/6e5dd1/books/${bookId}`,
+      `https://myapi-profstream.herokuapp.com/api/6e5dd1/books/${bookId}`,
       {
         method: "PUT",
         headers: {
@@ -191,14 +191,15 @@ background.volume = 0.4;
 background.autoplay = true;
 background.loop = true;
 
-// let mute = document.querySelector("#mute")
-// mute.addEventListener("click", () => {
-//   if (background.autoplay = true) {
-//     background.pause()
-//   }
-//   console.log('did it work')
-// })
+let mute = document.querySelector("#mute")
+mute.addEventListener("click", () => {
+  if (background.muted === false) {
+      background.muted = true 
 
-function toggleSound() {
-  return background.paused ? background.play() : background.pause()
-}
+  } else if (background.muted === true) {
+      background.muted = false
+
+  }  else {
+    background.muted = false
+  }
+})
